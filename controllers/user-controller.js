@@ -81,7 +81,7 @@ const userController = {
                     return;
                 }
                 //return dbUserData as deletedUser to be used in cascade deletion of thoughts
-                return deletedUser;
+                return dbUserData;
             })
             .then(deletedUser => {
                 Thought.deleteMany(
@@ -139,3 +139,5 @@ const userController = {
             });
         }
 }
+
+module.exports = userController;
